@@ -22,7 +22,7 @@ Silahkan ikuti [guide manual](https://github.com/AleoHQ/snarkOS) Jika Anda lebih
 # Instal Otomatis 
 
 ```
-wget -O prover.sh https://github.com/Art-Sy5team/Aleo/blob/main/prover.sh && chmod +x prover.sh && ./prover.sh
+wget -O prover.sh https://raw.githubusercontent.com/Art-Sy5team/Aleo/main/prover.sh && chmod +x prover.sh && ./prover.sh
 ```
 
 Tunggu sampai Instalisasi Selesai!
@@ -52,7 +52,7 @@ rm -rf snarkOS
 ## (2) Uninstal (Hapus snarkos dan semua file node)
 
 ```
-wget -q -O aleo_remove_snarkos.sh https://github.com/Art-Sy5team/Aleo/blob/main/aleo_remove_snarkos2.sh && chmod +x aleo_remove_snarkos.sh && sudo /bin/bash aleo_remove_snarkos.sh
+wget -q -O aleo_remove_snarkos.sh https://raw.githubusercontent.com/Art-Sy5team/Aleo/main/aleo_remove_snarkos2.sh && chmod +x aleo_remove_snarkos.sh && sudo /bin/bash aleo_remove_snarkos.sh
 ```
 
 ## INFO
