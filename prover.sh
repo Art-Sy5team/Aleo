@@ -48,3 +48,4 @@ echo -e "\e[1m\e[32m7. Create Account Aleo Prover... \e[0m" && sleep 1
 snarkos account new
 
 echo '=============== SETUP FINISHED BACKUP SEMUA DATA KALIAN ==================='
+echo '=================== Private Key, View Key, Address ================================ '
