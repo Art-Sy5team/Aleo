@@ -9,7 +9,7 @@ else
   sudo apt install curl -y < "/dev/null"
 fi
 
-echo "========================================================================================================================================================================"
+echo "====================================================================================================================="
 echo -e "\e[92m" 
 echo  "       /0000000 /000000  /00000000|        /000000               /0000000   /00|                                                "; 
 echo  "      / 0000000| 00__  00|__0000__/       /00__  00             | 00____/  | 00|                                                ";
@@ -23,7 +23,7 @@ echo  "                                                   /00  | 00             
 echo  "                                                  |  000000/                                                                    ";
 echo  "                                                   \______/                                                                     ";
 echo -e "\e[0m"
-echo "========================================================================================================================================================================"
+echo "====================================================================================================================="
 echo -e 'Menghapus semua file snarkos  ...\n\n'
 echo '/etc/systemd/system/aleod.service'
 echo '/etc/systemd/system/aleod-miner.service'
@@ -41,7 +41,7 @@ echo "=================================================="
 services=$(ls /etc/systemd/system | grep aleo)
 
 if [ -z "$services" ]; then
-	echo "service files are already removed"
+	echo "service FILE SUDAH DI HAPUS!"
 else
 	systemctl stop aleod aleod-miner aleo-prover aleo-client aleo-updater
 	systemctl disable aleod aleod-miner aleo-prover aleo-client aleo-updater
@@ -59,4 +59,4 @@ else
 fi
 
 echo "=================================================="
-echo -e 'Aleo Testnet2 snarkos is removed \n' && sleep 1
+echo -e 'SEMUA DIREKTORI Aleo snarkos Testnet DI HAPUS \n' && sleep 1
