@@ -28,6 +28,10 @@ wget -q -O aleo_snarkos3.sh https://raw.githubusercontent.com/Art-Sy5team/Aleo/m
 
 Tunggu sampai Instalisasi Selesai!
 
+### Install Screen
+```
+apt install screen
+```
 # Run Prover
 
 ```
@@ -42,22 +46,46 @@ screen -R prover
 - `ctrl A D` untuk Menyimpan Screen Agar Jalan di Background Perangkat anda.
 - Jika anda Ingin Kembali ke Screen Yang Sedang Jalan, Gunakan Perintah `screen -Rd prover`
 
-## (1) Uninstal (Gunakan Jika Ingin Menghapus Data Node)
-
+## check log prover
 ```
-rustup self uninstall
-rm -rf prover.sh
-rm -rf snarkOS
+journalctl -u aleo-prover -f -o cat
 ```
 
-## (2) Uninstal (Hapus snarkos dan semua file node)
+# Daftar Command yang berguna
 
+### Check Private Key Aleo yang terhubung di NODE
+```
+grep "prover" /etc/systemd/system/aleo-prover.service | awk '{print $5}'
+```
+
+### membuat backup folder Wallet (simpan dengan baik)
+```
+cat $HOME/aleo/account_new.txt
+```
+### Check logs prover aleo
+```
+journalctl -u aleo-prover -f -o cat
+```
+### Check logs client aleo yang berjalan
+```
+journalctl -u aleo-client -f -o cat
+```
+### Restart prover aleo
+```
+systemctl restart aleo-client
+```
+### STOP prover aleo
+```
+systemctl stop aleo-prover
+```
+### Uninstal (Hapus snarkos dan semua file node)
 ```
 wget -q -O aleo_remove_snarkos.sh https://raw.githubusercontent.com/Art-Sy5team/Aleo/main/aleo_remove_snarkos2.sh && chmod +x aleo_remove_snarkos.sh && sudo /bin/bash aleo_remove_snarkos.sh
 ```
 
 ## INFO
-Anda dapat menjalankan banyak **Miner** dengan Address Aleo yang sama | Anda tidak bisa check **saldo atau address** | rewards **Incentivized Testnet** belum ada!
+Anda dapat menjalankan banyak **Miner** dengan Address Aleo yang sama | Anda tidak bisa check **saldo atau address** explorer official (soon) | rewards **Incentivized Testnet** te;ah dimuali 2 Desember 2022 hingga 26 Januari 2023 ! 
+
 
 ### Art-Team INFO
 noted: ***art team*** here does not have any specific goals or intentions, they only collect data and share it with everyone.
