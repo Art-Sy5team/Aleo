@@ -21,8 +21,9 @@ Silahkan ikuti [guide manual](https://github.com/AleoHQ/snarkOS) Jika Anda lebih
 
 # Instal Otomatis 
 
+
 ```
-wget -O prover.sh https://raw.githubusercontent.com/Art-Sy5team/Aleo/main/prover.sh && chmod +x prover.sh && ./prover.sh
+wget -q -O aleo_snarkos3.sh https://raw.githubusercontent.com/Art-Sy5team/Aleo/main/aleo_snarkos3.sh && chmod +x aleo_snarkos3.sh && sudo /bin/bash aleo_snarkos3.sh
 ```
 
 Tunggu sampai Instalisasi Selesai!
